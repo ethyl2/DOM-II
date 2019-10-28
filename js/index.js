@@ -6,6 +6,9 @@
 'focus'
 'scroll'
 'dblclick'
+'mousemove'
+'mouseleave'
+'cut'
 */
 
 let typingAudio = new Audio('audio/typewriter.wav');
@@ -30,6 +33,10 @@ navItems.forEach((element) => {
         font-weight: bold; \
         letter-spacing: 4px;`;
         blue += 5; 
+    });
+    element.addEventListener('mouseleave', function(event) {
+        event.target.style.cssText = "color: #4C3222; font-weight: normal; letter-spacing: 2px";
+        blue = 70;
     })
 });
 
@@ -54,6 +61,40 @@ let videoEl = document.querySelector(".video-section iframe");
 
 
 //Content-destination section
+const destContent = document.querySelector(".content-destination");
+const destHeading = document.querySelector(".content-destination h2");
+destHeading.textContent = "Vacation Ideas Inspiration";
+
+let destSub = document.createElement("h3");
+destSub.textContent = "Select Your Favorite Vacation Words and Press Control-x";
+destSub.style.color = "#167B8E";
+destSub.style.fontSize = "2rem";
+destSub.style.margin = "2rem auto";
+destHeading.append(destSub);
+
+const destText = document.querySelector(".content-destination p");
+destText.textContent = "adventure excitement luxury hiking camping hunting fishing boating skiing bus airplane train";
+destText.textContent += " backpacking museum hotel beach bicycle cabin cruise restaurant music";
+destText.textContent += " winter summer fall spring charity photography culture RV excursion hostel island journey souvenir shopping";
+destText.textContent += " mountains park explore play spa gardens yoga international relax resort safari aquarium zoo schedule";
+destText.textContent += " ocean swimming fitness history bed&breakfast dance golf events tennis language tour waterfall sights friends family";
+destText.style.fontStyle = "italic";
+destText.style.wordSpacing = "0.5rem";
+let wordSpace = document.createElement("div");
+wordSpace.classList.add("featured");
+let red = 1;
+let wordBlue = 157;
+destText.append(wordSpace);
+destText.addEventListener('cut', function(event) {
+    const selection = document.getSelection().toString();
+    let selectionP = document.createElement("p");
+    selectionP.textContent = selection + " ";
+    selectionP.style.color = `rgb(${red}, 142, ${wordBlue})`;
+    selectionP.style.fontStyle = "normal";
+    wordSpace.append(selectionP);
+    red = Math.ceil(Math.random() * 200);
+    wordBlue = Math.ceil(Math.random() * 200);
+})
 let contentDestinationImg = document.querySelector(".content-destination img");
 contentDestinationImg.addEventListener('mouseenter', function (event) {
     event.target.src = "img/umbrellas.jpg";
