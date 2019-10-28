@@ -37,7 +37,10 @@ navItems.forEach((element) => {
     element.addEventListener('mouseleave', function(event) {
         event.target.style.cssText = "color: #4C3222; font-weight: normal; letter-spacing: 2px";
         blue = 70;
-    })
+    });
+    element.addEventListener('click', function(event) {
+        event.target.preventDefault();
+    });
 });
 
 //Intro
@@ -105,12 +108,18 @@ contentDestinationImg.addEventListener('mouseout', function (event) {
 
 
 //Content pick section
+
+
 let destinations = document.getElementsByClassName("destination");
 for (let i = 0; i < destinations.length; i++) {
     destinations[i].addEventListener('mouseenter', function (event) {
         event.target.style.color = "white";
         event.target.style.padding = "1rem";
         event.target.style.fontWeight = "bold";
+    });
+    destinations[i].addEventListener('click', function(event) {
+        event.target.textContent = "Sign up for this vacation below: ";
+        event.stopPropagation();
     });
 }
 
@@ -135,6 +144,16 @@ islandDestination.addEventListener('mouseenter', (event) => {
     event.target.style.backgroundSize = "cover";
     event.target.style.backgroundImage = "url('img/island2.jpg')";  
 });
+
+let destinationButtons = document.querySelectorAll(".destination .btn");
+destinationButtons.forEach((el) => {
+    el.addEventListener('click', (event) => {
+        event.target.style.background = "#49861B";
+        event.target.style.color = "white";
+        event.stopPropagation();
+    });
+});
+
 
 //contact section
 let contact = document.getElementById("contact");
