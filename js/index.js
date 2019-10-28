@@ -3,12 +3,35 @@
 'mouseenter'
 'mouseout'
 'click'
+'focus'
+'scroll'
+'dblclick'
 */
 
 let typingAudio = new Audio('audio/typewriter.wav');
 document.addEventListener('keydown', function() {
     typingAudio.play();
 })
+
+//Nav
+const logo = document.querySelector(".logo-heading");
+let bikeAudio = new Audio('audio/bikeHorn.wav');
+logo.addEventListener('dblclick', function(event) {
+    event.target.style.padding = "1rem";
+    event.target.style.borderRadius = "2px";
+    event.target.style.background = "#FEEC93";
+    bikeAudio.play();
+})
+const navItems = document.querySelectorAll(".nav-link");
+navItems.forEach((element) => {
+    let blue=70;
+    element.addEventListener('mousemove', function(event) {
+        event.target.style.cssText= `color: rgb(243, ${blue}, 71); \
+        font-weight: bold; \
+        letter-spacing: 4px;`;
+        blue += 5; 
+    })
+});
 
 //Intro
 
@@ -18,6 +41,16 @@ let busImg = document.querySelector(".intro img");
 busImg.addEventListener('click', function() {
     audio.play();
 });
+
+
+//Video section
+let scrollAudio = new Audio("audio/scrollSound.wav");
+let videoText = document.querySelector(".video-section p");
+videoText.addEventListener('scroll', function() {
+    console.log("Scrolling");
+    scrollAudio.play();
+})
+let videoEl = document.querySelector(".video-section iframe");
 
 
 //Content-destination section
