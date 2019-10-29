@@ -7,7 +7,6 @@ allBlocks.forEach(block => {
     block.addEventListener('click', function(event) {
         allBlocks.forEach(one => one.style.order = 0);
         event.target.style.order = -1;
-        //event.stopPropagation();
     });
 
     //While a mouse is clicked down on a box, it should move to the right
