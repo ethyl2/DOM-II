@@ -69,7 +69,7 @@ const destHeading = document.querySelector(".content-destination h2");
 destHeading.textContent = "Vacation Ideas Inspiration";
 
 let destSub = document.createElement("h3");
-destSub.textContent = "Select Your Favorite Vacation Words and Press Control-x";
+destSub.textContent = "Select Your Favorite Vacation Words and Press Control-C";
 destSub.style.color = "#167B8E";
 destSub.style.fontSize = "2rem";
 destSub.style.margin = "2rem auto";
@@ -88,7 +88,7 @@ wordSpace.classList.add("featured");
 let red = 1;
 let wordBlue = 157;
 destText.append(wordSpace);
-destText.addEventListener('cut', function(event) {
+destText.addEventListener('copy', function(event) {
     const selection = document.getSelection().toString();
     let selectionP = document.createElement("p");
     selectionP.textContent = selection + " ";
