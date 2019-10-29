@@ -24,6 +24,11 @@ allBlocks.forEach(block => {
         clearInterval(interval);
         //console.log("in mouse up");
     });
+    block.addEventListener('mouseleave', function(event) {
+        clearInterval(interval);
+        //console.log("in mouse leave");
+    });
+    
 });
 
 
