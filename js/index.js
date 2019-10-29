@@ -1,4 +1,5 @@
 /*Events used include:
+'resize'
 'keydown'
 'mouseenter'
 'mouseout'
@@ -11,9 +12,18 @@
 'copy'
 */
 
+//Whole page events
+
+// audio for keydown event
 let typingAudio = new Audio('audio/typewriter.wav');
 document.addEventListener('keydown', function() {
     typingAudio.play();
+})
+const body = document.querySelector("body");
+console.log(body);
+window.addEventListener('resize', function(event) {
+    console.log("resized");
+    body.style.background = "#99C7CA";
 })
 
 //Nav
