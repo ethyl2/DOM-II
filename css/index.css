@@ -225,6 +225,14 @@ img {
   color: #212529;
   font-size: 1.6rem;
   padding: 20px;
+  background: gray;
+}
+.footer img {
+  max-width: 10%;
+  position: relative;
+}
+.footer img:last-of-type {
+  left: 88vw;
 }
 .home .intro {
   padding: 90px 0 10px;

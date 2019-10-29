@@ -1,4 +1,4 @@
-/*Event Handlers used include:
+/*Events used include:
 'keydown'
 'mouseenter'
 'mouseout'
@@ -8,7 +8,7 @@
 'dblclick'
 'mousemove'
 'mouseleave'
-'cut'
+'copy'
 */
 
 let typingAudio = new Audio('audio/typewriter.wav');
@@ -77,9 +77,9 @@ destHeading.append(destSub);
 
 const destText = document.querySelector(".content-destination p");
 destText.textContent = "adventure excitement luxury hiking camping hunting fishing boating skiing bus airplane train";
-destText.textContent += " backpacking museum hotel beach bicycle cabin cruise restaurant music";
+destText.textContent += " backpacking museum hotel games beach bicycle cabin cruise restaurant music";
 destText.textContent += " winter summer fall spring charity photography culture RV excursion hostel island journey souvenir shopping";
-destText.textContent += " mountains park explore play spa gardens yoga international relax resort safari aquarium zoo schedule";
+destText.textContent += " mountains park forest explore play spa gardens yoga international relax resort safari aquarium zoo schedule";
 destText.textContent += " ocean swimming fitness history bed&breakfast dance golf events tennis language tour waterfall sights friends family";
 destText.style.fontStyle = "italic";
 destText.style.wordSpacing = "0.5rem";
@@ -184,5 +184,21 @@ const emailInput = document.querySelector('input[type="email"]');
 emailInput.addEventListener('focus', (event) => {
     event.target.style.background = '#E1B5A2';    
   });
+
+// Footer
+
+const train = document.querySelector("footer img");
+const trainSound = new Audio('audio/train.wav');
+trainSound.preload = "auto";
+train.addEventListener('mouseover', function() {
+    TweenMax.to(train, 2, {left: "100vw", opacity: 0, scale: 0.6});
+    trainSound.play();
+});
+const bus = document.querySelector("footer img:last-of-type");
+bus.addEventListener('mouseover', function() {
+    TweenMax.to(bus, 2, {left: "10vw", opacity: 0, scale: 0.6});
+    audio.play();
+});
+
 
   
