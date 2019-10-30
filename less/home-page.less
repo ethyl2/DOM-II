@@ -19,8 +19,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-   
     
     .text-content {
       width: 48%;
@@ -73,13 +71,38 @@
       }
     }
   }
-
+  .video-section {
+    border-bottom: 2px dashed @navigation-border;
+    padding-bottom: 2rem;
+    iframe {
+      max-width: 40%;
+    } 
+    p {
+      display: block;
+      height: 60%;
+      overflow: scroll;
+    }
+  }
   .content-destination {
-    width: 75%;
+    width: 85%;
     margin: 0 auto 30px;
 
     @media @mobile {
       width: 100%;
+    }
+
+    .featured {
+      text-align: center;
+      font-size: 5rem;
+      font-family: 'Modak', display;
+      letter-spacing: 2px;
+      margin: 2rem;
+      padding: 2rem;
+      p {
+        display: inline-block;
+        font-size: 5rem;
+        padding: 0 1rem;
+      }
     }
 
     img {

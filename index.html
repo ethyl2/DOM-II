@@ -5,8 +5,9 @@
   <meta charset="utf-8">
 
   <title>Fun Bus Travel Agency - Solution</title>
-
-  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto|Modak" rel="stylesheet">
   <link href="css/index.css" rel="stylesheet">
 
   <script src="js/index.js" async></script>
@@ -36,6 +37,7 @@
       <h2>Welcome To Fun Bus!</h2>
       <p>Traveling expedition modern, clean webdesign blogger clean website theme website modern. Design pretty design, travelblogger adventure WordPress wanderlust theme blogger website expedition theme travelblogger. Adventure fun traveler pretty design website expedition.</p>
     </header>
+
     <section class="content-section">
       <div class="text-content">
         <h2>Let's Go!</h2>
@@ -46,6 +48,7 @@
         <img src="img/adventure.jpg" alt="Let's go on an adventure!">
       </div>
     </section>
+
     <section class="content-section inverse-content">
       <div class="img-content">
           <img src="img/fun.jpg" class="img-fluid rounded" alt="Lets have fun!">
@@ -54,14 +57,41 @@
         <h2>Adventure Awaits</h2>
         <p>Adventure webdesign pretty design design, excursion cute WordPress blogger design webdesign adventure. Pretty simple traveling fun WordPress wanderlust darn simple organized.</p> 
         <p>Expedition colorful design simple excursion blogger blogger design WordPress design, design organized website theme.</p>
-      </div>
-     
+      </div> 
     </section>
+
+    <section class="content-section video-section" >
+        <div class="text-content">
+          <h2>Memories and Music</h2>
+          <p>Oh we're going to a hukilau
+              A huki huki huki huki hukilau
+              Everybody loves the hukilau
+              Where the laulau is the kaukau at the luau
+              We throw our nets out into the sea
+              And all the amaama come a swimming to me
+              Oh, we're going to a hukilau
+              A huki huki huki hukilau
+              What a beautiful day for fishing
+              That old Hawaiian way
+              Where the hukilau nets are swishing
+              Down in old Laie bay
+              A huki huki huki huki hukilau
+              Everybody loves the hukilau
+              Where the laulau is the kaukau at the luau
+              We throw our nets out into the sea
+              And all the amaama come a swimming to me
+              Oh, we're going to a hukilau
+              A huki huki huki hukilau</p> 
+        </div> 
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rp0hmQPmkf8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
     <section class="content-destination">
       <h2>Pick Your Destination</h2>
       <p>Expedition excursion design darn excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
       <img src="img/destination.jpg" alt="Second slide">
     </section>
+
     <section class="content-pick">
 
       <div class="destination">
@@ -80,10 +110,32 @@
         <div class="btn">Sign Me Up!</div>
       </div>
     </section>
+    <section id="contact" class="content-section">
+      <h2>Send Me More Info!</h2>
+
+      <form method="POST" action="https://formspree.io/xdqzoqqm">
+        <label for="name">My Name</label>
+        <input type="name" name="name"><br />
+        <label for="vacation">My Vacation</label>
+        <select name="Vacation">
+          <option value="sun">Fun in the Sun</option>
+          <option value="mountain">Mountain Excursion</option>
+          <option value="island">Island Getaway</option>
+        </select><br /> 
+        <label for="phone">My Phone</label>
+        <input type="tel" name="phone"><br />
+        <label for="email">My Email</label>
+        <input type="email" name="email"><br />
+        <button type="submit">Send</button>
+      </form>
+  </section> <!-- Close #Contact -->
+
   </div><!-- container -->
 
   <footer class="footer">
+    <img src="img/train2.png" alt="train engine icon" />
     <p>Copyright Fun Bus 2018</p>
+    <img src="img/bus.png" alt="bus icon" />
   </footer>
 
 </body>
